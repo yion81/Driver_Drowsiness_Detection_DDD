@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detection</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="{{ url_for('index_view') }}">
+                <img src="/static/images/image_2024-12-13_165041038-removebg-preview.png" alt="Logo" class="logo">
+            </a>
+        </div>
+        <div class="navbar-links">
+            <a href="{{ url_for('standard_view') }}">Standard View</a>
+            <a href="{{ url_for('standard_ai_view') }}">Standard and AI View</a>
+        </div>
+    </nav>
+    <h1>Driver Drowsiness Detection (DDD)</h1>
+    <h1>⚠️ Tolong muka untuk dekat, kalau tidak maka prediksi tidak akan akurat!</h1>
+    <h1>⚠️ Pencerahan harus cukup! Supaya prediksi akurat</h1>
+    <img id="video" src="{{ url_for('video_feed_std') }}" alt="Video Feed 1">
+    <div id="warning">⚠️ Warning: You appear drowsy!</div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

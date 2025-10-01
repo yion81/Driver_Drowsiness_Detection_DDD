@@ -117,7 +117,6 @@ def get_drowsy_status():
     print(f"Returning drowsy status: {is_drowsy}")
     return jsonify({'is_drowsy': bool(is_drowsy)})
 
-# i want to kill myself this is 4 hours of debugging just for typecasting is_drowsy into bool
 
 @app.route('/video_feed_std')
 def video_feed_std():
